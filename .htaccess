@@ -1,0 +1,1 @@
+Header set Content-Security-Policy "allow 'self'; media-src *; img-src *; script-src 'self' 'unsafe-inline' https://ajax.googleapis.com www.google-analytics.com; style-src 'self' 'unsafe-inline';"

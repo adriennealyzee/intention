@@ -1,0 +1,267 @@
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend {
+    /*table, tbody, tfoot, thead, tr, th, td*/
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-style: inherit;
+    font-size: 100%;
+    font-family: inherit;
+}
+
+body{
+	font-family: 'Open Sans';
+	font-weight: 300;
+	font-size: 19px;
+    background-color: #fefefe;
+}
+
+#main{
+	margin-top: 40px;
+}
+
+/*.container{
+	margin: 0 auto;
+	max-width: 900px;
+}*/
+
+#container {
+    position: relative;
+    min-height: 100%;
+    height: 100%;
+    height: auto;  
+    margin: 0 auto;  
+    max-width: 900px;
+}
+html>body #container {
+    height: auto;
+}
+
+#footer {
+    position: absolute;
+    bottom:0;
+    width: 100%;
+    background-color:#CCC;
+    color:#333;
+    padding:20px;
+}
+
+#todoapp{
+	width: 95%;
+	margin: 0 auto;
+}
+
+#footer h1{
+	font-size: 12px;
+	text-transform: uppercase;
+	text-align: center;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+#footer{
+	background-color: #FAF4ED;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	padding: 10px 0px 10px 0px;
+	color: #D1BFAB;
+	text-align: center;
+}
+
+#footer .info{
+	color: #a6a6a6;
+	font-size: 12px;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
+	text-align: center;
+	opacity: 0.7;
+}
+
+#info b{
+	color: #D1BFAB;
+}
+
+#info {
+	clear: both;
+	margin: 0 auto;
+	/*background-color: #FAF4ED;*/
+	padding-top: 15px;
+	color: #a6a6a6;
+	font-size: 12px;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
+	text-align: center;
+	opacity: 0.7;
+	padding-top: 150px;
+	padding-bottom: 15px;
+}
+
+#info a {
+	color: inherit;
+}
+
+#info b{
+    text-transform: uppercase;
+    opacity: 0.5;
+    /*font-weight: normal;*/
+}
+
+.category{
+	font-size: 11px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color: #b1b1b1;
+	margin-left: 20px;
+	font-weight: 300;
+}
+
+#todo-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#todo-list li {
+	position: relative;
+	height: auto;
+	float: left;
+	margin-right: 5px;
+	text-wrap: none;
+	display:block;
+	  font-size: 13px;
+	  font-weight: 400;
+	  color: #303030;
+	  text-decoration: none;
+	  overflow: hidden;
+	  text-overflow: ellipsis;
+	  line-height: 40px;
+	  margin: -5px 0 0 0;
+	  vertical-align: top;
+
+	  /*fade*/
+	  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+
+}
+
+#todo-list li:hover{
+	background-color: #fefefe;
+	-webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+#todo-list li #goal{
+	border-right: 1px dotted #ccc;
+}
+
+#todo-list li .today{
+	width: 260px;
+}
+
+#todo-list li .week{
+	width: 200px;
+}
+
+#todo-list li .month{
+	width: 150px;
+}
+
+#todo-list li .year{
+	width: 140px;
+}
+
+#todo-list li .longyears{
+	width: 140px;
+}
+
+textarea.edit {
+	font-family: 'Open Sans';
+	font-size: inherit;
+	border: 0px;
+	font-weight: 400;
+	resize: none;
+	width: 100%;
+	outline: none;
+
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    background-color: #f7f7f7;
+    overflow: none;
+
+    /*sizing so text area doesn't overflow*/
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#todo-list li.editing {
+	border: none;
+	padding: 0;
+}
+
+#todo-list li.editing .edit {
+	display: block;
+	padding: 20px;
+}
+
+#todo-list li.editing .view {
+	display: none;
+}
+
+
+#todo-list li label {
+	white-space: pre-line;
+	word-break: break-word;
+	padding: 20px;
+	display: block;
+	line-height: 18px;
+	-webkit-transition: color 0.4s;
+	transition: color 0.4s;
+}
+
+
+
+#todo-list li .edit {
+	display: none;
+}
+
+
+
+
+
+#footer {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  display: block;
+  height:25px;
+  width: 100%;
+  color: #c3c3c3;
+  background: #fff;
+  font-size: 12px;
+  padding-top: 2px;
+  margin-bottom: 15px;
+}
+
+#footer .adrienne{
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.5;
+  font-size: 11px;
+}
+
+#footer a {
+  color: #afafaf;
+  text-decoration: none;
+}
+
+#footer a:hover {
+    background-color: rgba(0,0,0,0.07);
+    padding: 3px 0px 3px 0px;
+}

@@ -1,0 +1,14 @@
+{
+    "manifest_version": 2,
+
+    "name": "Intention",
+    "description": "Replace new tab page with a beautiful and simple list of your personal goal dashboard for inspiration and reminder.",
+
+    "version": "1.0",
+
+    "chrome_url_overrides":{
+        "newtab" : "index2.html"
+    },
+
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}

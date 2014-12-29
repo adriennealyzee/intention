@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Intention</title>
+
+  <!-- CSS and Fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,800' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="assets/base.css" type="text/css" media="screen" chartset="utf-8">
+
+  <!-- Javascript libraries -->
+  <script type="text/javascript" src="js/lib/jquery.js"></script>
+  <script type="text/javascript" src="js/lib/underscore.js"></script>
+  <script type="text/javascript" src="js/lib/backbone.js"></script>
+  <script type="text/javascript" src="js/lib/backbone.localStorage.js"></script>
+
+</head>
+<body>
+
+  <section id="todoapp">
+
+  <div id="container">
+     <section id="main">
+       <ul id="todo-list"></ul>
+     </section>
+   </section>
+
+  <!-- Includes -->
+  <!-- Item template -->
+
+  <script type="text/template" id="item-template">
+
+    <% if (category == "today") { %>
+      <li class="today" id="goal" style="border-left: 1px dotted #ccc;">
+        <span class="category"><%= category %></span>
+
+        <div class="view">  
+           <label><%= title %></label>
+        </div>
+
+        <textarea class="edit" value="" rows="5" cols="20"><%= title %></textarea>
+      </li>
+    <% } %>
+
+    <% if (category == "week") { %>
+      <li class="week" id="goal">
+        <span class="category"><%= category %></span>
+
+        <div class="view">  
+           <label><%= title %></label>
+        </div>
+
+        <textarea class="edit" value="" rows="1" id="textarea"><%= title %></textarea>
+      </li>
+    <% } %>
+
+    <% if (category == "month") { %>
+      <li class="month" id="goal">
+        <span class="category"><%= category %></span>
+
+        <div class="view">  
+           <label><%= title %></label>
+        </div>
+
+        <textarea class="edit" value="" rows="5" cols="20"><%= title %></textarea>
+      </li>
+    <% } %>
+
+    <% if (category == "year") { %>
+      <li class="year" id="goal">
+        <span class="category"><%= category %></span>
+
+        <div class="view">  
+           <label><%= title %></label>
+         <!-- <button class="destroy"></button> --        </div>
+
+        <textarea class="edit" value=""><%= title %></textarea>
+      </li>
+    <% } %>
+
+    <% if (category == "5 years") { %>
+      <li class="longyears" id="goal">
+        <span class="category"><%= category %></span>
+
+        <div class="view">  
+           <label><%= title %></label>
+        </div>
+
+        <textarea class="edit" value="" rows="5" cols="20"><%= title %></textarea>
+      </li>
+    <% } %>
+
+     
+
+   </script>
+ 
+  <!-- Footer -->
+  <div id="footer">
+    Double-click to edit | Shift+Enter to create new line
+    <br />
+    <span class="adrienne">
+      Intention by <a href="http://www.adriennetran.com">Adrienne Tran</a>
+    </span>
+  </div>
+
+  </div>
+
+  <!-- auto resize textarea as types more -->
+ <script type="text/javascript" src="js/lib/jquery.autosize.js"></script>
+ <script type="text/javascript" src="js/lib/intention.js"></script>
+
+  <!-- Load MVC -->
+  <script type="text/javascript" src="js/models/todo.js"></script>
+  <script type="text/javascript" src="js/collections/todos.js"></script>
+  <script type="text/javascript" src="js/views/todos.js"></script>
+  <script type="text/javascript" src="js/views/app.js"></script>
+  <script type="text/javascript" src="js/routers/router.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+
+</body>
+</html>
