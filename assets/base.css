@@ -171,7 +171,7 @@ html>body #container {
 	width: 150px;
 }
 
-#todo-list li .year{
+#todo-list li .year, #todo-list li .annual{
 	width: 140px;
 }
 
